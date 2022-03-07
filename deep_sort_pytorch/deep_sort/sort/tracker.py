@@ -1,7 +1,8 @@
 # vim: expandtab:ts=4:sw=4
 from __future__ import absolute_import
 import numpy as np
-from . import kalman_filter
+#from . import kalman_filter
+from . import extended_kalman_filter
 from . import linear_assignment
 from . import iou_matching
 from .track import Track

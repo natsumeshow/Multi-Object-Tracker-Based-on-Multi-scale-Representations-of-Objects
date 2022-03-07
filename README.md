@@ -1,4 +1,4 @@
-# YMulti-Object-Tracker-Based-on-Multi-scale-Representations-of-Objects
+# Multi-Object-Tracker-Based-on-Multi-scale-Representations-of-Objects
 
 This repository includes Pytorch implementation for the following paper:
 

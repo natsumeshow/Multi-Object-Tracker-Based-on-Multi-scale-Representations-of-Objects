@@ -155,7 +155,7 @@ class Model(nn.Module):
                 test = test_m(x.clone())
                 #print(test.shape)
                 #print(test_features.shape)
-                test_features = torch.add(0.8*test_features  ,0.25*test )
+                test_features = torch.add(0.8*test_features  ,0.2*test )
             '''
             elif i == 23 : 
                 test = test_m(x.clone())

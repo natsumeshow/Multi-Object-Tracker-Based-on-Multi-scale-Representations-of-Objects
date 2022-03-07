@@ -9,11 +9,11 @@ Conghe Xia, Guanqun Ding, Nevrez Imamoglu, Hiroshi Ishikawa, Ryosuke Nakamura
 ## Before you run the tracker
 1. Clone the repository recursively:
 ```bash
-git clone https://github.com/natsumeshow/Multi-Object-Tracker-Based-on-Multi-scale-Representations-of-Objects.git`
+git clone https://github.com/natsumeshow/Multi-Object-Tracker-Based-on-Multi-scale-Representations-of-Objects.git
 ```
 2. Make sure that you fulfill all the requirements: Python 3.8 or later with all [requirements.txt](https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch/blob/master/requirements.txt) dependencies installed, including torch>=1.7. To install, run:
 ```bash
-pip install -r requirements.txt`
+pip install -r requirements.txt
 ```
 ## Tracking sources
 

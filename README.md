@@ -1,5 +1,5 @@
-# YOLOv5 + 
-### 1. Visulization Results
+# YMulti-Object-Tracker-Based-on-Multi-scale-Representations-of-Objects
+
 This repository includes Pytorch implementation for the following paper:
 
 Multi-Object Tracker Based on Multi-scale Representations of Objects, 2022.

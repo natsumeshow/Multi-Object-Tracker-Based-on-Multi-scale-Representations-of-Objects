@@ -120,7 +120,7 @@ class Tracker:
             targets = np.array([tracks[i].track_id for i in track_indices])
             cost_matrix = self.metric.distance(features, targets)
             cost_matrix = linear_assignment.gate_cost_matrix(
-                self.kf, cost_matrix, tracks, dets, track_indices,
+                self.ekf, cost_matrix, tracks, dets, track_indices,
                 detection_indices)
 
             return cost_matrix
@@ -157,7 +157,7 @@ class Tracker:
         return matches, unmatched_tracks, unmatched_detections
 
     def _initiate_track(self, detection, class_id):
-        mean, covariance = self.kf.initiate(detection.to_xyah())
+        mean, covariance = self.ekf.initiate(detection.to_xyah())
         self.tracks.append(Track(
             mean, covariance, self._next_id, class_id, self.n_init, self.max_age,
             detection.feature))

@@ -42,14 +42,11 @@ python3 track.py --source 0 --yolo_weights yolov5x.pt --img 1280  # our model us
 ## Filter tracked classes
 
 By default the tracker tracks all MS COCO classes.
-
-If you only want to track persons I recommend you to get [these weights](https://drive.google.com/file/d/1gglIwqxaH2iTvy6lZlXuAcMpd_U0GCUb/view?usp=sharing) for increased performance
+If you want to track a subset of the MS COCO classes, add their corresponding index after the classes flag
 
 ```bash
 python3 track.py --source 0 --yolo_weights yolov5/weights/yolov5x.pt --classes 0  # tracks persons, only
 ```
-
-If you want to track a subset of the MS COCO classes, add their corresponding index after the classes flag
 
 ```bash
 python3 track.py --source 0 --yolo_weights yolov5/weights/yolov5x.pt --classes 0 2  # tracks cats and dogs, only

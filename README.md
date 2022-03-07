@@ -1,5 +1,5 @@
-# Multi-Object-Tracker-Based-on-Multi-scale-Representations-of-Objects
-
+# YOLOv5 + 
+### 1. Visulization Results
 This repository includes Pytorch implementation for the following paper:
 
 Multi-Object Tracker Based on Multi-scale Representations of Objects, 2022.
@@ -9,13 +9,13 @@ Conghe Xia, Guanqun Ding, Nevrez Imamoglu, Hiroshi Ishikawa, Ryosuke Nakamura
 
 ## Before you run the tracker
 1. Clone the repository recursively:
-
-`https://github.com/natsumeshow/Multi-Object-Tracker-Based-on-Multi-scale-Representations-of-Objects.git`
-
+```bash
+git clone https://github.com/natsumeshow/Multi-Object-Tracker-Based-on-Multi-scale-Representations-of-Objects.git`
+```
 2. Make sure that you fulfill all the requirements: Python 3.8 or later with all [requirements.txt](https://github.com/mikel-brostrom/Yolov5_DeepSort_Pytorch/blob/master/requirements.txt) dependencies installed, including torch>=1.7. To install, run:
-
-`pip install -r requirements.txt`
-
+```bash
+pip install -r requirements.txt`
+```
 ## Tracking sources
 
 Tracking can be run on most video formats
@@ -25,7 +25,7 @@ python3 track.py --source ... --show-vid # show live inference results as well
 ```
 
 - Video:  `--source file.mp4`
-- Webcam:  `--source 0`
+  - Webcam:  `--source 0`
 
 ## Select a Yolov5 family model
 

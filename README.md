@@ -24,7 +24,7 @@ python3 track.py --source ... --show-vid # show live inference results as well
 ```
 
 - Video:  `--source file.mp4`
-  - Webcam:  `--source 0`
+- Webcam:  `--source 0`
 
 ## Select a Yolov5 family model
 

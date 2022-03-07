@@ -44,7 +44,8 @@ class Tracker:
         self.max_age = max_age
         self.n_init = n_init
 
-        self.kf = kalman_filter.KalmanFilter()
+        #self.kf = kalman_filter.KalmanFilter()
+        self.ekf = extended_kalman_filter.KalmanFilter()
         # new 
         self.unmatched_tracks = []
         self.tracks = []
@@ -56,7 +57,7 @@ class Tracker:
         This function should be called once every time step, before `update`.
         """
         for track in self.tracks:
-            track.predict(self.kf)
+            track.predict(self.ekf)
 
     def increment_ages(self):
         for track in self.tracks:
@@ -83,7 +84,7 @@ class Tracker:
         # Update track set.
         for track_idx, detection_idx in matches:
             self.tracks[track_idx].update(
-                self.kf, detections[detection_idx])
+                self.ekf, detections[detection_idx])
 
         samples = self.metric.get_features_libr()
         #print(np.asarray(samples.get(1)).shape)
@@ -92,7 +93,7 @@ class Tracker:
             self.tracks[track_idx].mark_missed()
             # new and importent
             self.tracks[track_idx].update(
-                self.kf, None, track_idx=track_idx,
+                self.ekf, None, track_idx=track_idx,
                 samples = samples, ori_img=ori_img, yolo_features=yolo_features, unmatch_flag=True)
 
         for detection_idx in unmatched_detections:

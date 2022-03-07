@@ -52,13 +52,13 @@ def detect(opt):
 
     # The MOT16 evaluation runs multiple inference streams in parallel, each one writing to
     # its own .txt file. Hence, in that case, the output folder is not restored
-    '''
+    
     if not evaluate:
         if os.path.exists(out):
             pass
             shutil.rmtree(out)  # delete output folder
         os.makedirs(out)  # make new output folder
-    '''
+    
     half = device.type != 'cpu'  # half precision only supported on CUDA
 
     # Load model

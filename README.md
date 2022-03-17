@@ -49,7 +49,7 @@ python3 track.py --source 0 --yolo_weights yolov5/weights/yolov5x.pt --classes 0
 ```
 
 ```bash
-python3 track.py --source 0 --yolo_weights yolov5/weights/yolov5x.pt --classes 0 2  # tracks cats and dogs, only
+python3 track.py --source 0 --yolo_weights yolov5/weights/yolov5x.pt --classes 0 2  # tracks persons and cars, only
 ```
 
 [Here](https://tech.amikelive.com/node-718/what-object-categories-labels-are-in-coco-dataset/) is a list of all the possible objects that a Yolov5 model trained on MS COCO can detect. Notice that the indexing for the classes in this repo starts at zero.
